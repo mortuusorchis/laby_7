@@ -1,20 +1,79 @@
-﻿// laby_7.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
+﻿#include <iostream>;
+using namespace std;
+void zadanie2_1();
+void zadanie2_2();
+void zadanie2_3();
+void zadanie1();
+void zadanie2_();
 
-#include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	zadanie2_1();
+	zadanie2_2();
+	zadanie2_3();
+	zadanie2_();
+	}
+
+void zadanie2_1() {
+	const int tableSize = 5;
+	int tab[tableSize];
+	cout << "Wprowadz do tablicy 5 elementow: " << endl;
+
+	int suma_elementow = 0;
+
+	for (int i = 0; i < 5; i++) {
+		cout << "Podaj liczbe nr " << i + 1 << ": ";
+		cin >> tab[i];
+		suma_elementow = suma_elementow + tab[i];
+	}
+	cout << "Elementy twojej tablicy wraz z przypisanymi indeksami: " << endl;
+	for (int i = 0; i < 5; i++) {
+
+		cout << "indeks: " << i << " wartosc tablicy: " << tab[i] << endl;
+	}
+	cout << endl;
+	cout << "Suma elementow tablicy wynosi: " << suma_elementow << endl;
+
+	cout << endl;
+
+	int* ptr[tableSize]; // deklaracja tablicy wskaźników
+
+	for (int i = 0; i < tableSize; i++) {
+		ptr[i] = &tab[i];
+		cout << "indeks: " << i << " wartosc ze wskaznika: " << *ptr[i] << endl;
+	}
+}
+void zadanie2_2() {
+	const int tableSize = 5;
+	int tab[tableSize];
+	int* p = &tab[0];
+
+	for (int i = 0; i < 5; i++) {
+		cout << "Podaj liczbe nr " << i + 1 << ": ";
+		cin >> tab[i];
+	}
+	cout << "Przechodzenie po calej tablisy za pomoca wskaznika p " << endl;
+
+	for (int i = 0; i < tableSize; i++) {
+		cout << "Adres: " << p << "  Wartosc: " << *p << endl;
+	}
+}
+void zadanie2_3() {
+	int a, b;
+	cout << "Podaj wartosc a: ";
+	cin >> a;
+
+	cout << "Podaj wartosc b: ";
+	cin >> b; 
 }
 
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
+void zadanie2_() {
+	int jakas_tablica[10];
+	int* wsk;
+	wsk = jakas_tablica;
 
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
+		cout << "Tablica na poczatku: " << endl;
+		for (int i = 0; i < 10; i++) {
+
+		}
+}
